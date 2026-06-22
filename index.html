@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr" class="motion-enhanced">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090609" />
+    <meta
+      name="description"
+      content="L’univers officiel de Manon : MYM, Fanvue, Telegram et Instagram."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Manon 💕 — Liens officiels" />
+    <meta
+      property="og:description"
+      content="Découvre mes contenus les plus exclusifs."
+    />
+    <title>Manon 💕 — Liens officiels</title>
+    <link rel="preload" href="./assets/background-manon.mp4" as="video" type="video/mp4" />
+    <link rel="stylesheet" href="./premium-v2.css?v=12" />
+    <script src="./script.js?v=12" defer></script>
+  </head>
+  <body>
+    <div class="video-scene" aria-hidden="true">
+      <video
+        id="background-video"
+        class="background-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="auto"
+        poster="./assets/cover-manon.jpg"
+      >
+        <source src="./assets/background-manon.mp4" type="video/mp4" />
+        <source src="./assets/background-manon.mov" type="video/quicktime" />
+      </video>
+      <div class="video-color"></div>
+      <div class="video-vignette"></div>
+      <div class="video-grain"></div>
+      <div id="cursor-light" class="cursor-light"></div>
+    </div>
+
+    <main class="page">
+      <article id="profile-card" class="profile-card">
+        <div class="topbar reveal" style="--delay: 30ms">
+          <span class="mini-brand"><i></i> MANON · OFFICIEL</span>
+          <button
+            id="share-button"
+            class="share-button"
+            type="button"
+            aria-label="Partager ou copier le lien de cette page"
+            title="Partager ou copier le lien"
+            data-tooltip="Partager ou copier"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 13v5.2A1.8 1.8 0 0 0 6.8 20h10.4a1.8 1.8 0 0 0 1.8-1.8V13" />
+            </svg>
+          </button>
+        </div>
+
+        <section class="profile">
+          <div class="avatar-stage reveal" style="--delay: 90ms">
+            <div class="avatar-halo"></div>
+            <div class="avatar-ring"></div>
+            <div class="avatar-wrap">
+              <img id="avatar" class="avatar-image" alt="" hidden />
+              <span id="avatar-fallback" class="avatar-fallback" aria-hidden="true">M</span>
+            </div>
+            <span class="verified" title="Profil officiel" aria-label="Profil officiel">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="m5.6 10.2 2.7 2.7 6.1-6.1" />
+              </svg>
+            </span>
+          </div>
+
+          <div class="status-row reveal" style="--delay: 140ms">
+            <span class="online-status">
+              <span class="online-radar" aria-hidden="true"><span></span></span>
+              En ligne maintenant
+            </span>
+          </div>
+
+          <div class="identity reveal" style="--delay: 190ms">
+            <p class="eyebrow">ENTRE DANS MON UNIVERS PRIVÉ</p>
+            <div class="title-row">
+              <h1 id="profile-name">Manon</h1>
+              <span class="hearts" aria-hidden="true">💕</span>
+            </div>
+            <p id="bio" class="bio">
+              Découvre mes contenus les plus exclusifs.
+            </p>
+          </div>
+
+          <nav
+            id="socials"
+            class="socials reveal"
+            style="--delay: 240ms"
+            aria-label="Mes réseaux sociaux"
+          ></nav>
+
+          <section class="links reveal" style="--delay: 310ms" aria-label="Mes plateformes">
+            <a
+              id="mym-link"
+              class="premium-link premium-link-mym"
+              href="#"
+              target="_blank"
+              rel="sponsored nofollow noreferrer"
+            >
+              <span class="link-aura" aria-hidden="true"></span>
+              <span class="platform-logo platform-logo-mym" aria-label="MYM">
+                <span class="brand-logo-mym" aria-hidden="true">MYM</span>
+              </span>
+              <span class="link-content">
+                <span class="link-kicker">MON ESPACE PRIVÉ</span>
+                <strong>Découvre mon MYM</strong>
+                <span>Photos/vidéos exclusives, messages privés & surprises.</span>
+              </span>
+              <span class="link-side">
+                <span class="popular"><i></i> POPULAIRE</span>
+                <span class="link-arrow">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M14 7l5 5-5 5" />
+                  </svg>
+                </span>
+              </span>
+              <span class="glint" aria-hidden="true"></span>
+            </a>
+
+            <a
+              id="fanvue-link"
+              class="premium-link premium-link-fanvue"
+              href="#"
+              target="_blank"
+              rel="sponsored nofollow noreferrer"
+            >
+              <span class="platform-logo platform-logo-fanvue" aria-label="Fanvue">
+                <img
+                  class="brand-logo-fanvue"
+                  src="./assets/fanvue-logo.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </span>
+              <span class="link-content">
+                <span class="link-kicker">CONTENU PREMIUM</span>
+                <strong>Rejoins-moi sur Fanvue</strong>
+                <span>Encore plus de proximité et de contenu.</span>
+              </span>
+              <span class="link-side">
+                <span class="exclusive">EXCLUSIF</span>
+                <span class="link-arrow">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M14 7l5 5-5 5" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+
+            <a
+              id="telegram-link"
+              class="premium-link premium-link-telegram"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="telegram-aura" aria-hidden="true"></span>
+              <span class="platform-logo platform-logo-telegram" aria-label="Telegram">
+                <svg class="brand-logo-telegram" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m3.5 11.3 16.1-6.2c.8-.3 1.5.2 1.2 1.4l-2.7 12.6c-.2.9-.8 1.1-1.6.7l-4.1-3-2 1.9c-.2.2-.4.4-.8.4l.3-4.2 7.6-6.9c.3-.3-.1-.5-.5-.2l-9.4 5.9-4.1-1.3c-.9-.3-.9-.9 0-1.1Z" />
+                </svg>
+              </span>
+              <span class="link-content">
+                <span class="link-kicker">LE CANAL PRIVÉ</span>
+                <strong>Rejoins mon Telegram</strong>
+                <span>Codes de réduction, sondages, photos & vidéos.</span>
+              </span>
+              <span class="link-side">
+                <span class="community"><i></i> COMMUNAUTÉ</span>
+                <span class="link-arrow">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M14 7l5 5-5 5" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </section>
+
+          <div class="trust reveal" style="--delay: 410ms">
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 5.5 5.6v5.9c0 4.1 2.7 7.8 6.5 9.5 3.8-1.7 6.5-5.4 6.5-9.5V5.6L12 3Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Liens officiels vérifiés
+            </span>
+            <i></i>
+            <span>Réservé aux adultes</span>
+          </div>
+        </section>
+
+        <footer class="card-footer reveal" style="--delay: 460ms">
+          <span id="copyright"></span>
+          <button id="footer-share" type="button">Copier le lien</button>
+        </footer>
+      </article>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite">
+      <span class="toast-check">✓</span>
+      <span id="toast-text"></span>
+    </div>
+  </body>
+</html>
