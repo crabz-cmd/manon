@@ -8,7 +8,8 @@ PAGE DE LIENS — PERSONNALISATION RAPIDE
 3. La photo de profil est déjà intégrée :
    - assets/profile-manon.jpg
 4. La vidéo de fond est déjà intégrée :
-   - assets/background-manon.mp4
+   - assets/background-manon-mobile.mp4
+   - assets/background-manon-loop.webp (secours animé iPhone)
    - lecture automatique, silencieuse et en boucle
 5. Ouvre index.html dans ton navigateur pour voir la page.
 

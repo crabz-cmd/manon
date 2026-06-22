@@ -9,9 +9,10 @@
 const profile = {
   name: "Manon",
   title: "Manon 💕",
+  siteUrl: "https://joliemanon.fr/",
   bio: "Découvre mes contenus les plus exclusifs.",
   avatar: "./assets/profile-manon.jpg",
-  backgroundVideo: "./assets/background-manon.mp4",
+  backgroundVideo: "./assets/background-manon-mobile.mp4",
   mymUrl: "https://mym.fans/Lajoliemanon",
   fanvueUrl: "https://www.fanvue.com/lajoliemanon",
   telegramUrl: "https://t.me/+jiagVV79mi4xMDI0",
@@ -293,6 +294,12 @@ async function copyToClipboard(text) {
 }
 
 function getShareUrl() {
+  if (profile.siteUrl) {
+    const url = new URL(profile.siteUrl);
+    url.searchParams.set("preview", "18-v1");
+    return url.toString();
+  }
+
   return window.location.href;
 }
 
