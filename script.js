@@ -109,17 +109,16 @@ function renderProfile() {
 }
 
 function setupBackgroundVideo() {
-  if (!profile.backgroundVideo) return;
-
   const video = $("#background-video");
-  video.src = profile.backgroundVideo;
+  if (!video) return;
+
   video.defaultMuted = true;
   video.muted = true;
+  video.volume = 0;
   video.loop = true;
   video.playsInline = true;
   video.autoplay = true;
   video.controls = false;
-  video.poster = "./assets/cover-manon.jpg";
   video.setAttribute("playsinline", "");
   video.setAttribute("webkit-playsinline", "");
 
@@ -137,10 +136,17 @@ function setupBackgroundVideo() {
     }
   };
 
-  video.addEventListener("loadeddata", markReady, { once: true });
+  video.addEventListener("loadeddata", tryPlay, { once: true });
+  video.addEventListener("loadedmetadata", tryPlay, { once: true });
   video.addEventListener("canplay", tryPlay, { once: true });
+  video.addEventListener("canplaythrough", tryPlay, { once: true });
   video.addEventListener("playing", markReady);
   video.addEventListener("ended", tryPlay);
+  video.addEventListener("pause", () => {
+    if (!document.hidden && !video.ended) {
+      window.setTimeout(tryPlay, 120);
+    }
+  });
 
   video.addEventListener(
     "error",
@@ -154,8 +160,9 @@ function setupBackgroundVideo() {
     if (!document.hidden && video.paused) tryPlay();
   });
 
+  window.addEventListener("pageshow", tryPlay);
+  window.addEventListener("focus", tryPlay);
   window.addEventListener("pointerdown", tryPlay, { once: true, passive: true });
-  video.load();
   tryPlay();
 }
 

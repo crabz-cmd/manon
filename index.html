@@ -15,9 +15,11 @@
       content="Découvre mes contenus les plus exclusifs."
     />
     <title>Manon 💕 — Liens officiels</title>
-    <link rel="preload" href="./assets/background-manon.mp4" as="video" type="video/mp4" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-18.svg?v=1" />
+    <link rel="shortcut icon" href="./assets/favicon-18.svg?v=1" />
+    <link rel="preload" href="./assets/background-manon.mp4?v=2" as="video" type="video/mp4" />
     <link rel="stylesheet" href="./premium-v2.css?v=12" />
-    <script src="./script.js?v=12" defer></script>
+    <script src="./script.js?v=13" defer></script>
   </head>
   <body>
     <div class="video-scene" aria-hidden="true">
@@ -31,10 +33,32 @@
         webkit-playsinline
         preload="auto"
         poster="./assets/cover-manon.jpg"
-      >
-        <source src="./assets/background-manon.mp4" type="video/mp4" />
-        <source src="./assets/background-manon.mov" type="video/quicktime" />
-      </video>
+        src="./assets/background-manon.mp4?v=2"
+        disablepictureinpicture
+        disableremoteplayback
+      ></video>
+      <script>
+        (() => {
+          const video = document.getElementById("background-video");
+          if (!video) return;
+
+          video.defaultMuted = true;
+          video.muted = true;
+          video.volume = 0;
+          video.loop = true;
+          video.playsInline = true;
+
+          const startImmediately = () => {
+            const playback = video.play();
+            if (playback?.catch) playback.catch(() => {});
+          };
+
+          startImmediately();
+          video.addEventListener("loadedmetadata", startImmediately, { once: true });
+          video.addEventListener("canplay", startImmediately, { once: true });
+          window.addEventListener("pageshow", startImmediately);
+        })();
+      </script>
       <div class="video-color"></div>
       <div class="video-vignette"></div>
       <div class="video-grain"></div>
